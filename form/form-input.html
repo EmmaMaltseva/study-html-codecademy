@@ -7,23 +7,28 @@
     <title>Range Input</title>
   </head>
   <body>
-    <section id="overlay">
+    <section id="overlay">      <!--голубой блок со всей информацией-->
       <img src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo">
-      <hr>
-      <form>
+      <hr>     <!--линия-->
+      <form action="submission.html">           
         <h1>Create a burger!</h1>
-				<section class="protein">
+        <section class="password">         <!--input-пароль-->
+          <label for="passwd">Add your password</label>
+    			<input type="password" name="passwd" id="passwd">
+        </section>
+        <hr>
+				<section class="protein">         <!--обычный input-->
           <label for="patty">What type of protein would you like?</label>
     			<input type="text" name="patty" id="patty">
         </section>
         <hr>
-        <section class="patties">
+        <section class="patties">          <!--input c диапазоном чисел-->
           <label for="amount">How many patties would you like?</label>
           <input type="number" name="amount" id="amount" min="0">
         </section>
         <hr>
 				
-        <section class="cooked">
+        <section class="cooked">        <!--input в виде линии как уровень громкости-->
           <label for="doneness">How do you want your patty cooked</label>
           <br>
           <span>Rare</span>
@@ -31,7 +36,7 @@
           <span>Well-Done</span>
         </section>
 
-        <section class="toppings">
+        <section class="toppings">       <!--input с галочками-->
           <span>What toppings would you like?</span>
           <br>
           <input type="checkbox" name="topping" id="lettuce" value="lettuce">
@@ -42,7 +47,7 @@
           <label for="onion">Onion</label>
         </section>
         <hr>
-        <section class="cheesy">
+        <section class="cheesy">     <!--input выбор одного ответа-->
           <span>Would you like to add cheese?</span>
           <br>
           <input type="radio" name="cheese" id="yes" value="yes">
@@ -51,7 +56,7 @@
           <label for="no">No</label>
         </section>
         <hr>
-        <section class="bun-type">
+        <section class="bun-type">    <!--combo-box-->
           <lable for="bun">What type of bun would you like?</lable>
           <select id="bun" name="bun">
             <option value="sesame">Sesame</option>
@@ -60,16 +65,25 @@
           </select>
         </section>
         <hr>
-        <section class="sauce-selection">
+        <section class="sauce-selection">     <!--input+combo-box (можно вписать своё)-->
           <lable for="sauce">What type of sauce would you like?</lable>
-          <input id="sauce" list="sauces" type="text" name="sauce"/>
+          <input id="sauce" list="sauces" type="text" name="sauce" placeholder="Cheese"/>
           <datalist id="sauces">
-            <option value="ketchup"></option> 
-            <option value="mayo"></option> 
+            <option value="Ketchup"></option> 
+            <option value="Cayo"></option> 
             <option value="curry"></option> 
           </datalist>
         </section>
-
+        <hr>
+        <section class="extra-info">   <!--ввод любого текста с изменением окна (как комментарий)-->
+          <label for="extra">Anything else?</label>
+          <br>
+          <textarea is="extra" name="extra" rows="3" clos="40" placeholder="I like a spicy burger"></textarea>
+        </section>
+        <hr>
+        <section>       <!--кнопка отправки на сервер-->
+          <input type="Submit">
+        </section>
       </form>
     </section>
   </body>
